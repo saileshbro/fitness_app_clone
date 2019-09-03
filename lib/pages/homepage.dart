@@ -1,5 +1,6 @@
 import 'package:fitness_app/clippers/appbarclipper.dart';
 import 'package:fitness_app/constants/colors.dart';
+import 'package:fitness_app/pages/clallenges.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -45,9 +46,9 @@ class HomePage extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              heading('RECENT CHALLENGES'),
+              heading('RECENT CHALLENGES', context),
               ChallengesSlider(),
-              heading('COMPLETED GOALS'),
+              heading('COMPLETED GOALS', context),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 17.0),
                 child: Column(
@@ -61,7 +62,7 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Padding heading(String sectionName) {
+  Padding heading(String sectionName, BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 28.0, vertical: 18),
       child: Row(
@@ -76,7 +77,17 @@ class HomePage extends StatelessWidget {
             ),
           ),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              switch (sectionName.toLowerCase()) {
+                case "recent challenges":
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (BuildContext context) {
+                    return ChallengesPage();
+                  }));
+                  break;
+                default:
+              }
+            },
             child: Text(
               'VIEW ALL',
               style: TextStyle(

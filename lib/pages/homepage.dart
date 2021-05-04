@@ -12,29 +12,33 @@ class HomePage extends StatelessWidget {
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
-              icon: Icon(
-                FontAwesomeIcons.solidHeart,
-                size: 20,
-              ),
-              title: Text('')),
+            label: "",
+            icon: Icon(
+              FontAwesomeIcons.solidHeart,
+              size: 20,
+            ),
+          ),
           BottomNavigationBarItem(
-              icon: Icon(
-                FontAwesomeIcons.search,
-                size: 20,
-              ),
-              title: Text('')),
+            label: "",
+            icon: Icon(
+              FontAwesomeIcons.search,
+              size: 20,
+            ),
+          ),
           BottomNavigationBarItem(
-              icon: Icon(
-                FontAwesomeIcons.bell,
-                size: 20,
-              ),
-              title: Text('')),
+            label: "",
+            icon: Icon(
+              FontAwesomeIcons.bell,
+              size: 20,
+            ),
+          ),
           BottomNavigationBarItem(
-              icon: Icon(
-                FontAwesomeIcons.user,
-                size: 20,
-              ),
-              title: Text(''))
+            label: "",
+            icon: Icon(
+              FontAwesomeIcons.user,
+              size: 20,
+            ),
+          )
         ],
       ),
       backgroundColor: Colors.grey[100],
@@ -106,7 +110,7 @@ class HomePage extends StatelessWidget {
 
 class StatCard extends StatelessWidget {
   const StatCard({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -122,7 +126,7 @@ class StatCard extends StatelessWidget {
           color: Colors.white,
           boxShadow: [
             BoxShadow(
-              color: Colors.grey[300],
+              color: Colors.grey[300]!,
               spreadRadius: 1,
               blurRadius: 15,
             ),
@@ -241,13 +245,13 @@ class StatCard extends StatelessWidget {
 
 class ChallengesSlider extends StatelessWidget {
   const ChallengesSlider({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 165,
+      height: 175,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         shrinkWrap: true,
@@ -262,7 +266,7 @@ class ChallengesSlider extends StatelessWidget {
 
 class ChallengeCard extends StatelessWidget {
   const ChallengeCard({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -273,7 +277,7 @@ class ChallengeCard extends StatelessWidget {
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.grey[300],
+            color: Colors.grey[300]!,
             spreadRadius: 1,
             blurRadius: 5,
           ),
@@ -373,13 +377,13 @@ class ChallengeCard extends StatelessWidget {
 
 class DashboardStat extends StatelessWidget {
   const DashboardStat({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Stack(
-      overflow: Overflow.visible,
+      clipBehavior: Clip.none,
       children: <Widget>[
         ClipPath(
           clipper: AppBarClipper(),

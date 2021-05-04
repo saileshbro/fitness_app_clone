@@ -111,13 +111,13 @@ class ChallengesCard extends StatelessWidget {
   final String imageUrl;
 
   const ChallengesCard({
-    @required this.eventName,
-    @required this.description,
-    @required this.numberOfPlayers,
-    @required this.perBet,
-    @required this.potSize,
-    @required this.imageUrl,
-    Key key,
+    required this.eventName,
+    required this.description,
+    required this.numberOfPlayers,
+    required this.perBet,
+    required this.potSize,
+    required this.imageUrl,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -130,7 +130,7 @@ class ChallengesCard extends StatelessWidget {
             color: Colors.white,
             boxShadow: [
               BoxShadow(
-                color: Colors.grey[300],
+                color: Colors.grey[300]!,
                 spreadRadius: 1,
                 blurRadius: 15,
               ),
@@ -152,7 +152,7 @@ class ChallengesCard extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     eventName,
-                    style: Theme.of(context).textTheme.body2.copyWith(
+                    style: Theme.of(context).textTheme.bodyText2!.copyWith(
                         fontFamily: 'Montserrat',
                         fontSize: 18,
                         fontWeight: FontWeight.bold),

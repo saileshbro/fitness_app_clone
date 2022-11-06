@@ -176,7 +176,7 @@ class ChallengesCard extends StatelessWidget {
                       Row(
                         children: <Widget>[
                           Icon(
-                            FontAwesomeIcons.userFriends,
+                            FontAwesomeIcons.userGroup,
                             color: brandDark,
                             size: 10,
                           ),

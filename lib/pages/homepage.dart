@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
           BottomNavigationBarItem(
             label: "",
             icon: Icon(
-              FontAwesomeIcons.search,
+              FontAwesomeIcons.magnifyingGlass,
               size: 20,
             ),
           ),

@@ -5,18 +5,18 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "fitness_app_clone",
+      "name": "fitness",
       "request": "launch",
       "type": "dart"
     },
     {
-      "name": "fitness_app_clone (profile mode)",
+      "name": "fitness (profile mode)",
       "request": "launch",
       "type": "dart",
       "flutterMode": "profile"
     },
     {
-      "name": "fitness_app_clone (release mode)",
+      "name": "fitness (release mode)",
       "request": "launch",
       "type": "dart",
       "flutterMode": "release"

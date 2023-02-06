@@ -1,4 +1,4 @@
-package com.example.fitness_app_clone
+package np.com.saileshdahal.fitness
 
 import io.flutter.embedding.android.FlutterActivity
 

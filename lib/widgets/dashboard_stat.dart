@@ -18,7 +18,7 @@ class DashboardStat extends StatelessWidget {
             decoration: BoxDecoration(
               color: appBarUnderneath,
             ),
-            height: MediaQuery.of(context).size.height * 0.35,
+            height: MediaQuery.of(context).size.height * 0.40,
           ),
         ),
         Positioned(
